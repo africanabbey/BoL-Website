@@ -1,295 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breath of Life | Certified CPR & First Aid Training</title>
-    <style>
-        /* CSS RESET & VARIABLES (Airy Modern Wellness Theme) */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        :root {
-            --bg-airy: #FAFAF7;
-            --bg-warm: #F4F1EC;
-            --wood-light: #C8A97E;
-            --wood-dark: #8B6B4F;
-            --medical-red: #D64545;
-            --text-charcoal: #2E2E2E;
-            --text-muted: #6F6F6F;
-            --shadow-soft: 0 4px 20px rgba(0,0,0,0.05);
-            --radius: 12px;
-        }
+        <h4>AHA Disclosure</h4>
 
-        body { background-color: var(--bg-airy); color: var(--text-charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        
-        /* LAYOUT & NAVIGATION */
-        header { background: white; padding: 15px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.02); display: flex; justify-content: space-between; align-items: center; }
-        .logo-container { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem; color: var(--text-charcoal); }
-        .logo-icon { color: var(--medical-red); font-size: 1.3rem; }
-        .nav-btn { background: var(--bg-warm); color: var(--wood-dark); border: none; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; cursor: pointer; text-decoration: none; }
+        <p class="footer-small">
+          The American Heart Association strongly promotes knowledge and
+          proficiency in all AHA courses and has developed instructional
+          materials for this purpose. Use of these materials in an educational
+          course does not represent course sponsorship by the AHA.
+        </p>
+      </div>
 
-        /* HERO SECTION */
-        .hero { padding: 60px 20px; text-align: center; background: linear-gradient(180deg, white 0%, var(--bg-airy) 100%); position: relative; }
-        .hero-badge { display: inline-block; background: var(--bg-warm); color: var(--wood-dark); padding: 6px 16px; border-radius: 30px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
-        .hero h1 { font-size: 2.3rem; line-height: 1.2; font-weight: 800; margin-bottom: 16px; color: var(--text-charcoal); }
-        .hero p { font-size: 1rem; color: var(--text-muted); margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .cta-group { display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto; }
-        .btn-primary { background: var(--medical-red); color: white; border: none; padding: 16px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; cursor: pointer; text-decoration: none; box-shadow: 0 4px 15px rgba(214,69,69,0.2); transition: transform 0.2s; }
-        .btn-primary:active { transform: scale(0.98); }
-        .btn-secondary { background: white; color: var(--text-charcoal); border: 2px solid var(--bg-warm); padding: 14px 24px; border-radius: var(--radius); font-size: 1rem; font-weight: 700; cursor: pointer; text-decoration: none; }
+    </div>
 
-        /* CORE SECTIONS */
-        section { padding: 40px 20px; max-width: 600px; margin: 0 auto; }
-        .section-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; text-align: center; }
-        .section-subtitle { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; }
+    <div class="footer-bottom">
+      © 2026 Breath of Life CPR Training LLC. All Rights Reserved.
+    </div>
+  </footer>
 
-        /* CARDS / FEATURES Grid */
-        .grid-card { background: white; padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow-soft); margin-bottom: 16px; border-left: 4px solid var(--wood-light); }
-        .grid-card h3 { font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-        .grid-card p { font-size: 0.9rem; color: var(--text-muted); }
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="overlay"></div>
 
-        /* COMPLIANCE WARNING BANNER */
-        .warning-banner { background: #FFF9F0; border: 1px solid #FFE7C4; border-radius: var(--radius); padding: 16px; margin-bottom: 30px; display: flex; gap: 12px; align-items: flex-start; }
-        .warning-icon { font-size: 1.2rem; }
-        .warning-text h4 { font-size: 0.9rem; font-weight: 700; color: #8F5B00; margin-bottom: 4px; }
-        .warning-text p, .warning-text a { font-size: 0.85rem; color: #6B4400; line-height: 1.4; }
-        .warning-text a { font-weight: 700; text-decoration: underline; }
+  <div class="checkout-modal" id="checkoutModal">
 
-        /* COMMUNITY FORM */
-        .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; color: var(--text-charcoal); }
-        .form-control { width: 100%; padding: 14px; border: 2px solid var(--bg-warm); border-radius: var(--radius); font-size: 0.95rem; background: white; outline: none; }
-        .form-control:focus { border-color: var(--wood-light); }
-        
-        /* DISCLOSURES / FOOTER */
-        .donation-block { background: var(--bg-warm); padding: 24px; border-radius: var(--radius); text-align: center; margin-top: 20px; }
-        .donation-block p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
-        .donation-buttons { display: flex; gap: 8px; justify-content: center; margin-bottom: 12px; }
-        .btn-donation { background: white; border: 1px solid var(--wood-light); padding: 8px 12px; font-size: 0.85rem; font-weight: 700; border-radius: 6px; color: var(--wood-dark); cursor: pointer; }
-        .donation-disclaimer { font-size: 0.75rem !important; color: var(--text-muted); font-style: italic; }
+    <div class="modal-header">
+      <h3>Course Registration</h3>
+      <button class="modal-close" id="closeModalBtn">×</button>
+    </div>
 
-        footer { background: var(--text-charcoal); color: white; padding: 40px 20px; text-align: center; font-size: 0.8rem; }
-        .aha-disclaimer-box { background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; margin-top: 20px; text-align: left; line-height: 1.5; color: #CCC; }
+    <div class="modal-body">
 
-        /* INTERACTIVE CHECKOUT MODAL DRAWER */
-        .drawer-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 200; display: none; }
-        .drawer { position: fixed; bottom: 0; left: 0; width: 100%; max-height: 92%; background: white; border-top-left-radius: 20px; border-top-right-radius: 20px; z-index: 201; box-shadow: 0 -5px 25px rgba(0,0,0,0.1); padding: 24px; overflow-y: auto; display: none; transform: translateY(100%); transition: transform 0.3s ease-out; }
-        .drawer.open { transform: translateY(0); }
-        .drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--bg-warm); }
-        .drawer-title { font-weight: 800; font-size: 1.2rem; }
-        .drawer-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); }
-        
-        .checkbox-container { display: flex; gap: 10px; align-items: flex-start; margin-top: 15px; margin-bottom: 15px; }
-        .checkbox-container input { transform: scale(1.2); margin-top: 3px; }
-        .checkbox-container label { font-size: 0.8rem; color: var(--text-charcoal); font-weight: 600; line-height: 1.4; }
+      <div class="modal-alert">
+        <strong>Independent Student Manuals Required</strong>
+        <p>
+          Students must independently purchase their required AHA materials
+          before class attendance.
+        </p>
+      </div>
 
-        .policy-scroller { background: var(--bg-airy); padding: 12px; border: 1px solid var(--bg-warm); border-radius: var(--radius); font-size: 0.75rem; max-height: 140px; overflow-y: auto; color: var(--text-muted); margin-bottom: 15px; }
-        .policy-scroller h5 { font-weight: 700; color: var(--text-charcoal); margin: 8px 0 4px 0; }
-    </style>
-</head>
-<body>
+      <div class="form-group">
+        <label for="selectedCourse">Select Training Track</label>
 
-    <!-- STICKY HEADER -->
-    <header>
-        <div class="logo-container">
-            <span class="logo-icon">￼</span> Breath of Life
-        </div>
-        <a href="#outreach" class="nav-btn">Group Events</a>
-    </header>
+        <select id="selectedCourse">
+          <option value="bls">
+            Basic Life Support (BLS)
+          </option>
 
-    <!-- HERO DISPLAY -->
-    <main class="hero">
-        <div class="hero-badge">AHA-Aligned Guidelines Classroom Training</div>
-        <h1>Get Certified.<br>Be Prepared. Save Lives.</h1>
-        <p>Premium mobile, personalized, and small-group CPR instruction. We cultivate real-world competency within a warm, professional, community-centric environment.</p>
-        <div class="cta-group">
-            <button class="btn-primary" onclick="openCheckout('General Registration')">Book Your Class Today</button>
-            <a href="#outreach" class="btn-secondary">Host a Community Event</a>
-        </div>
-    </main>
+          <option value="heartsaver">
+            Heartsaver CPR AED
+          </option>
+        </select>
+      </div>
 
-    <!-- SERVICES / SIZES SECTION -->
-    <section id="services">
-        <h2 class="section-title">Training Formats Built For You</h2>
-        <p class="section-subtitle">We seamlessly scale parameters based directly on your venue, schedule, or group dynamic.</p>
-        
-        <div class="grid-card">
-            <h3><span>￼</span> Personal 1:1 Instruction</h3>
-            <p>Accelerated, highly focused modules customized strictly around your professional workflow or specific pacing requests.</p>
-        </div>
-        <div class="grid-card">
-            <h3><span>￼</span> Small & Moderate Groups</h3>
-            <p>Perfect for workspace compliance, school faculties, families, and athletic teams looking for dynamic collaborative learning experiences.</p>
-        </div>
-        <div class="grid-card">
-            <h3><span>￼</span> Community & Church Outreach</h3>
-            <p>Scalable, high-impact emergency preparedness events designed specifically for community safe spaces and religious configurations.</p>
-        </div>
-    </section>
+      <div class="terms-box">
+        <h4>Training Terms</h4>
 
-    <!-- COMMUNITY LEAD INTAKE SYSTEM -->
-    <section id="outreach" style="background-color: white; border-top: 1px solid var(--bg-warm); border-bottom: 1px solid var(--bg-warm);">
-        <h2 class="section-title">Bring CPR to Your Community</h2>
-        <p class="section-subtitle">We transport training systems directly to your church, workspace, or neighborhood facility.</p>
-        
-        <!-- Replace the action attribute below with your free Formspree or Jotform link when ready -->
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="orgName">Organization Name</label>
-                <input type="text" id="orgName" name="organization" class="form-control" placeholder="e.g., Grace Fellowship Church" required>
-            </div>
-            <div class="form-group">
-                <label for="orgType">Organization Type</label>
-                <select id="orgType" name="type" class="form-control" required>
-                    <option value="">-- Select One --</option>
-                    <option value="Church">Church / Faith-Based</option>
-                    <option value="Community Center">Community Center</option>
-                    <option value="School">School / Educational</option>
-                    <option value="Business">Business / Corporate</option>
-                    <option value="Other">Other Non-Profit Group</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="contactName">Contact Name</label>
-                <input type="text" id="contactName" name="contact_name" class="form-control" placeholder="Your Full Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="name@domain.com" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 555-5555" required>
-            </div>
-            <div class="form-group">
-                <label for="groupSize">Estimated Class Size</label>
-                <select id="groupSize" name="size" class="form-control" required>
-                    <option value="">-- Select Target Size --</option>
-                    <option value="1-2">Private Session (1 - 2 individuals)</option>
-                    <option value="3-10">Small Group (3 - 10 students)</option>
-                    <option value="11-25">Medium Group (11 - 25 students)</option>
-                    <option value="25+">Large Scale Event (25+ attendees)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="notes">Special Requirements / Target Local Address</label>
-                <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Tell us about your space locations or target calendar options..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary" style="width: 100%;">Submit Event Request</button>
-        </form>
-    </section>
+        <ul>
+          <li>All transactions are non-refundable</li>
+          <li>One reschedule permitted within policy limits</li>
+          <li>10-minute late arrival policy enforced</li>
+          <li>Students must maintain respectful participation</li>
+        </ul>
+      </div>
 
-    <!-- SUSTAINABILITY AND LLC DISCLOSURES -->
-    <section id="mission">
-        <div class="donation-block">
-            <h3 style="font-size: 1.2rem; margin-bottom: 6px;">Support Our Mission Focus</h3>
-            <p>Your elective contributions help us subsidize community workshops and supply critical gear allocations for low-income civic spaces.</p>
-            <div class="donation-buttons">
-                <button class="btn-donation" onclick="alert('Redirecting to your payment gateway link...')">$25</button>
-                <button class="btn-donation" onclick="alert('Redirecting to your payment gateway link...')">$100</button>
-                <button class="btn-donation" onclick="alert('Redirecting to your payment gateway link...')">$300</button>
-            </div>
-            <p class="donation-disclaimer">Important Transparency Note: Breath of Life operates legally as a for-profit LLC. Contributions or elective donations fund targeted community safety initiatives and are explicitly not tax-deductible as charitable donations.</p>
-        </div>
-    </section>
+      <div class="checkbox-row">
+        <input type="checkbox" id="agreeCheckbox">
 
-    <!-- SLIDEOUT TRANSACTIVE REGISTER GATEWAY -->
-    <div class="drawer-overlay" id="overlay" onclick="closeCheckout()"></div>
-    <div class="drawer" id="checkoutDrawer">
-        <div class="drawer-header">
-            <span class="drawer-title" id="courseTitle">Course Checkout</span>
-            <button class="drawer-close" onclick="closeCheckout()">&times;</button>
-        </div>
+        <label for="agreeCheckbox">
+          I acknowledge the workbook requirement,
+          attendance policy, and registration terms.
+        </label>
+      </div>
 
-        <!-- AHA COMPLIANCE WORKBOOK MANDATE BANNER -->
-        <div class="warning-banner">
-            <span class="warning-icon">￼</span>
-            <div class="warning-text">
-                <h4>Independent Student Manual Required</h4>
-                <p>To avoid tax complications and remain fully compliant with strict administrative criteria, <strong>student workbooks are not provided or resold by us.</strong></p>
-                <p style="margin-top: 8px;">You must independently purchase and read your required material before attending:</p>
-                <p style="margin-top: 6px;"><a href="https://shopcpr.heart.org/product-type/us-student-materials" target="_blank" rel="noopener">￼ Order via Official AHA Materials Portal</a></p>
-                <p style="margin-top: 6px; font-weight: 700; color: #B23232;">Entry will be flatly denied without your physical/digital workbook on class day. No walk-in spares are provided.</p>
-            </div>
-        </div>
+      <button
+        class="btn btn-primary btn-full"
+        id="payButton"
+        disabled
+      >
+        Continue To Payment
+      </button>
 
-        <div class="form-group">
-            <label>1. Choose Your Instruction Track</label>
-            <select class="form-control" id="selectedCourse">
-                <option value="bls">Basic Life Support (BLS) Provider Manual Needed</option>
-                <option value="heartsaver">Heartsaver® CPR AED Student Workbook Needed</option>
-            </select>
-        </div>
+    </div>
+  </div>
 
-        <div class="form-group">
-            <label>2. Review Structural Terms & Training Policies</label>
-            <div class="policy-scroller">
-                <h5>Payment & Cancellation Framework</h5>
-                <p>All transactions are completely non-refundable. Registrants may request a rescheduling modification exactly one (1) time within 15 days of transaction date, provided the new date falls within 30 days of that initial rescheduling request window.</p>
-                
-                <h5>Grace Period & Attendance Rules</h5>
-                <p>A strict 10-minute maximum late grace period is applied. Once past this window, structural safety doors lock automatically, and late entries are classified as forfeited no-shows.</p>
-                
-                <h5>Rescheduling Limitations</h5>
-                <p>Rescheduling notices must be formally submitted a full 24 hours prior to the class start times. Late notices trigger an automatic no-show status charge.</p>
-                
-                <h5>Class Behavior & Quiet Etiquette</h5>
-                <p>All cellular phones and communications tech must be put onto silent modes during structural teaching hours. Students must interact with total integrity, mutual respect, and high focus. Disruptions forfeit your seat without refunds.</p>
-                
-                <h5>Testing Metrics & Ratios</h5>
-                <p>Instruction follows a max 8:1 student-to-instructor ratio. Regular tactical skill check-offs occur during progression ahead of your required final text validations. Digital certificates dispatch within 24–48 hours of successful completion.</p>
-            </div>
-        </div>
-
-        <div class="checkbox-container">
-            <input type="checkbox" id="agreeCheckbox" onchange="togglePayButton()">
-            <label for="agreeCheckbox">I certify that I have independently ordered the required AHA manual via the link above, and explicitly agree to the behavioral guidelines, 10-min late rule, and non-refundable terms.</label>
-        </div>
-
-        <!-- Replace alert link below with your specific production Stripe checkout link or PayPal URL -->
-        <button class="btn-primary" id="payButton" style="width: 100%; opacity: 0.4; cursor: not-allowed;" disabled onclick="alert('Redirecting to Secure Live Stripe Checkout Interface...')">Complete Booking Payment</button>
-    </div>
-
-    <!-- COMPLIANT COMPACT FOOTER SYSTEM -->
-    <footer>
-        <p>&copy; 2026 Breath of Life CPR Training LLC. All Rights Reserved.</p>
-        <div class="aha-disclaimer-box">
-            <strong>Official American Heart Association Training Disclosure Statement:</strong><br>
-            The American Heart Association strongly promotes knowledge and proficiency in all AHA courses and has developed instructional materials for this purpose. Use of these materials in an educational course does not represent course sponsorship by the AHA. Any fees charged for such a course, except for a portion of fees needed for AHA course materials, do not represent income to the AHA.
-        </div>
-    </footer>
-
-    <!-- RESPONSIVE FUNCTIONALITY LOGIC -->
-    <script>
-        const drawer = document.getElementById('checkoutDrawer');
-        const overlay = document.getElementById('overlay');
-        const payButton = document.getElementById('payButton');
-        const checkbox = document.getElementById('agreeCheckbox');
-
-        function openCheckout(title) {
-            overlay.style.display = 'block';
-            drawer.style.display = 'block';
-            setTimeout(() => drawer.classList.add('open'), 10);
-        }
-
-        function closeCheckout() {
-            drawer.classList.remove('open');
-            setTimeout(() => {
-                drawer.style.display = 'none';
-                overlay.style.display = 'none';
-            }, 300);
-        }
-
-        function togglePayButton() {
-            if(checkbox.checked) {
-                payButton.disabled = false;
-                payButton.style.opacity = '1';
-                payButton.style.cursor = 'pointer';
-            } else {
-                payButton.disabled = true;
-                payButton.style.opacity = '0.4';
-                payButton.style.cursor = 'not-allowed';
-            }
-        }
-    </script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
