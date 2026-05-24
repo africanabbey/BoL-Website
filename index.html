@@ -1,4 +1,385 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Breath of Life | CPR & First Aid Certification Training</title>
+
+  <meta
+    name="description"
+    content="Professional CPR and First Aid certification training for individuals, healthcare teams, churches, schools, and community organizations."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="brand-mark">+</div>
+        <div>
+          <span class="brand-title">Breath of Life</span>
+          <span class="brand-subtitle">CPR & First Aid Training</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#outreach">Community Training</a>
+        <a href="#mission">Mission</a>
+      </nav>
+
+      <button class="btn btn-primary nav-cta" onclick="openCheckout()">
+        Book Training
+      </button>
+            <input
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <span class="eyebrow">AHA-Aligned Classroom Instruction</span>
+
+        <h1>
+          CPR Training Designed
+          For Real-World Confidence.
+        </h1>
+
+        <p class="hero-copy">
+          Premium mobile and small-group CPR certification training
+          built for healthcare professionals, workplaces, schools,
+          churches, and community organizations.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" onclick="openCheckout()">
+            Schedule Your Class
+          </button>
+
+          <a href="#outreach" class="btn btn-secondary btn-large">
+            Host A Community Event
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong>Mobile Training</strong>
+            <span>On-site instruction available</span>
+          </div>
+
+          <div class="metric-card">
+            <strong>Small Groups</strong>
+            <span>Focused hands-on learning</span>
+          </div>
+
+          <div class="metric-card">
+            <strong>Fast Certification</strong>
+            <span>Digital cards delivered quickly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img
+          src="assets/images/hero-cpr.jpg"
+          alt="CPR training session"
+          class="hero-image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-tag">Training Options</span>
+        <h2>Flexible CPR Training Formats</h2>
+        <p>
+          Built for healthcare workers, businesses, schools,
+          families, ministries, and community organizations.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <div class="service-icon">❤</div>
+          <h3>Private Instruction</h3>
+          <p>
+            Personalized one-on-one sessions designed around your
+            schedule, learning pace, and certification requirements.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🏥</div>
+          <h3>Healthcare & Workplace Teams</h3>
+          <p>
+            Structured small-group instruction for clinical teams,
+            offices, schools, athletic staff, and employers.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🤝</div>
+          <h3>Community Outreach</h3>
+          <p>
+            Large-scale training experiences for churches,
+            nonprofits, ministries, and neighborhood organizations.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE BAND -->
+  <section class="feature-band">
+    <div class="container feature-band-grid">
+
+      <div class="feature-band-content">
+        <span class="section-tag">Professional Instruction</span>
+
+        <h2>
+          Calm, Professional,
+          Hands-On Training.
+        </h2>
+
+        <p>
+          Breath of Life delivers modern CPR education in a supportive,
+          high-focus environment that emphasizes practical readiness,
+          confidence, and emergency response competency.
+        </p>
+
+        <ul class="feature-list">
+          <li>Hands-on learning environment</li>
+          <li>Healthcare-focused instruction</li>
+          <li>Mobile and on-site training options</li>
+          <li>Structured small-group sessions</li>
+        </ul>
+      </div>
+
+      <div class="feature-band-image">
+        <img
+          src="assets/images/class-training.jpg"
+          alt="CPR class training"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OUTREACH FORM -->
+  <section id="outreach" class="section outreach-section">
+    <div class="container outreach-grid">
+
+      <div>
+        <span class="section-tag">Community Events</span>
+        <h2>Bring CPR Training To Your Organization</h2>
+
+        <p class="outreach-copy">
+          We provide scalable CPR training for churches,
+          schools, workplaces, ministries, and civic groups.
+        </p>
+
+        <img
+          src="assets/images/community-training.jpg"
+          alt="Community CPR event"
+          class="outreach-image"
+        />
+      </div>
+
+      <div class="form-card">
+        <form action="#" method="POST">
+
+          <div class="form-group">
+            <label for="orgName">Organization Name</label>
+            <input
+              type="text"
+              id="orgName"
+              name="organization"
+              placeholder="Grace Fellowship Church"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="orgType">Organization Type</label>
+            <select id="orgType" name="type" required>
+              <option value="">Select One</option>
+              <option value="Church">Church / Faith-Based</option>
+              <option value="Community Center">Community Center</option>
+              <option value="School">School / Educational</option>
+              <option value="Business">Business / Corporate</option>
+              <option value="Other">Other Non-Profit Group</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contactName">Contact Name</label>
+              type="text"
+              id="contactName"
+              name="contact_name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@domain.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(555) 555-5555"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="groupSize">Estimated Class Size</label>
+            <select id="groupSize" name="size" required>
+              <option value="">Select Target Size</option>
+              <option value="1-2">Private Session (1 - 2)</option>
+              <option value="3-10">Small Group (3 - 10)</option>
+              <option value="11-25">Medium Group (11 - 25)</option>
+              <option value="25+">Large Group (25+)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special Requirements</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Tell us about your location, scheduling needs, or event goals..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Submit Event Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE SECTION -->
+  <section class="section compliance-section">
+    <div class="container">
+
+      <div class="compliance-card">
+
+        <div class="compliance-header">
+          <span class="compliance-badge">Important Student Information</span>
+          <h2>Required Course Materials & Policies</h2>
+        </div>
+
+        <div class="compliance-grid">
+
+          <div class="policy-box">
+            <h3>Student Manual Requirement</h3>
+            <p>
+              Student workbooks are not provided or resold by Breath of Life.
+              Participants must independently purchase required materials
+              before attending class.
+            </p>
+
+            <a
+              href="https://shopcpr.heart.org/product-type/us-student-materials"
+              target="_blank"
+              rel="noopener"
+              class="policy-link"
+            >
+              View Official AHA Materials
+            </a>
+          </div>
+
+          <div class="policy-box">
+            <h3>Attendance & Scheduling</h3>
+            <p>
+              A strict 10-minute grace period is enforced. Rescheduling
+              requests must be submitted at least 24 hours before class.
+            </p>
+          </div>
+
+          <div class="policy-box">
+            <h3>Class Environment</h3>
+            <p>
+              Students are expected to maintain respectful participation,
+              professionalism, and focused engagement throughout instruction.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission" class="section mission-section">
+    <div class="container">
+
+      <div class="mission-card">
+        <span class="section-tag">Community Impact</span>
+
+        <h2>Supporting Safer Communities</h2>
+
+        <p>
+          Elective contributions help support community-focused training
+          initiatives and emergency preparedness outreach programs.
+        </p>
+
+        <div class="donation-row">
+          <button class="donation-btn">$25</button>
+          <button class="donation-btn">$100</button>
+          <button class="donation-btn">$300</button>
+        </div>
+
+        <p class="mission-disclaimer">
+          Breath of Life operates as a for-profit LLC.
+          Contributions are not tax-deductible charitable donations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <h3>Breath of Life</h3>
+        <p>
+          Professional CPR & First Aid certification training.
+        </p>
+      </div>
+
+      <div>
         <h4>AHA Disclosure</h4>
 
         <p class="footer-small">
