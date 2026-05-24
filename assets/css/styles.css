@@ -1,1 +1,74 @@
+:root {
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
 
+.terms-box ul {
+  padding-left: 1.25rem;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+#payButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+
+  .hero-grid,
+  .feature-band-grid,
+  .outreach-grid,
+  .service-grid,
+  .compliance-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-section {
+    padding-top: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .mission-card,
+  .compliance-card,
+  .form-card {
+    padding: 2rem;
+  }
+
+  .donation-row {
+    flex-direction: column;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}
